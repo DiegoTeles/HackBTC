@@ -16,6 +16,7 @@ const NavBarWrapper = styled.section`
 	h1 {
 		font-weight: normal;
 		color: #fff;
+		color: #fff;
 		text-align: center;
 		/* vertical-align:middle; */
 		display: table-cell;
