@@ -10,17 +10,10 @@ import NavBar from "../../_components/NavBar";
 
 /*  Styles */
 const MainWrapper = styled.div`
-	position: relative;
-	background: #f3f2f3;
 
 `;
 
 const LabelBar = styled.div`
-	justify-items: right;
-	position: relative;
-	background: #f3f2f3;
-	/* float: left; */
-
 
 `;
 
