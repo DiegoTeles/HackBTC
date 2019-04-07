@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 import styled from '@emotion/styled';
 
 const SideBarWrapper = styled.section`
-	border: 1px solid red;
-	padding: 30px;
+	padding:  30px 0 0 20px;
 	margin-top: 200px;
 
 	li {
 		color: white;
-		font-size: 14px;
+		font-size: 16px;
 		padding: 5px ;
+		/* line-height: 16px; */
 		transform: uppercase;
 		text-decoration: none;
 		list-style:none;
@@ -35,11 +35,11 @@ class NavBar extends React.Component {
 			<React.Fragment>
 				<SideBarWrapper>
 					<ul>
-						<li>Home</li>
-						<li>PONTOS</li>
-						<li>SUGESTOES CADASTRADAS</li>
-						<li>DESAFIOS</li>
-						<li>EVENTOS</li>
+						<li><i class="fas fa-home"></i> Home</li>
+						<li><i class="fas fa-wallet"></i> PONTOS</li>
+						<li><i class="far fa-edit"></i>  SUGESTOES CADASTRADAS</li>
+						<li><i class="fas fa-child"></i> DESAFIOS</li>
+						<li><i class="far fa-calendar-alt"></i>  EVENTOS</li>
 					</ul>
 				</SideBarWrapper>
 			</React.Fragment>

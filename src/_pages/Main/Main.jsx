@@ -8,7 +8,6 @@ import styled from '@emotion/styled';
 /* Components */
 import SideBar from '../../_components/SideBar';
 import ShowContent from '../../_components/ShowContent';
-import PostContainer from '../../_components/PostContainer'
 /*  Styles */
 const MainWrapper = styled.div`
 	position: relative;
@@ -18,7 +17,7 @@ const MainWrapper = styled.div`
 const LabelBar = styled.div`
 	position: fixed;
 	width: 15%;
-	height: 720px;
+	height: 100%;
 	float: left;
 	background: #333333;
 `;
@@ -55,9 +54,6 @@ class Main extends Component {
 				<ContentWrapper>
 					<ShowContent />
 				</ContentWrapper>
-				{/* <ContainerPost>
-				<PostContainer />
-				</ContainerPost> */}
 			</MainWrapper>
 		);
 	}

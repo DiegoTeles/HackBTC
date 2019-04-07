@@ -9,6 +9,7 @@ import NavBar from '../../_components/NavBar';
 import perfilImg from '../../_assets/img/22.png';
 import PostContainer from '../PostContainer'
 import EventAtendee from '../EventAtendee';
+import Footer from '../Footer'
 
 // import NavPoints from '../NavPoints'
 /* Placeholder */
@@ -21,6 +22,7 @@ const SectionWrapper = styled.section`
 	text-align: center;
 	align-content: center;
     margin: 140px 0 70px 0;
+
 `;
 
 const IMGWrapper = styled.img`
@@ -171,8 +173,8 @@ class ShowContent extends React.Component {
                     <ContainerWrapper>
                     <PostContainer />
                     <EventAtendee />
-
                     </ContainerWrapper>
+					{/* <Footer /> */}
 				</SectionWrapper>
 			</React.Fragment>
 		);

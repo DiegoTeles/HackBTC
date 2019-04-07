@@ -3,9 +3,13 @@ import { connect } from 'react-redux';
 import styled from '@emotion/styled';
 
 const SectionWrapper = styled.section`
-	background: #f9f8f8;
-	text-align: center;
-    width: 35%;
+	background: #33b5e5;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	/* height: 100%; */
+
 `;
 
 const H3Wrapper = styled.h3`
@@ -16,7 +20,7 @@ const H4Wrapper = styled.h4`
     /* float: right; */
 `;
 
-class EventAtendee extends React.Component {
+class Footer extends React.Component {
 	constructor(props) {
 		super(props);
 		this.props = props;
@@ -27,7 +31,7 @@ class EventAtendee extends React.Component {
 		return (
 			<React.Fragment>
 				<SectionWrapper>
-                    <h4><i class="far fa-calendar-alt"></i> Eventos</h4>
+                    <h4>Footer</h4>
 					{/* INSERIR CARDS */}
 				</SectionWrapper>
 			</React.Fragment>
@@ -46,4 +50,4 @@ function mapStateToProps(state) {
 
 // the way to connect a component to redux is
 // to return its connected proxy
-export default connect(mapStateToProps)(EventAtendee);
+export default connect(mapStateToProps)(Footer);
