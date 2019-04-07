@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import styled from "@emotion/styled";
 // import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
-import perfilImg from '../../_assets/img/22.png';
+import perfilImg from '../../_assets/img/adm2.jpeg';
 
 const NavBarWrapper = styled.header`
 position: fixed;

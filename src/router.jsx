@@ -20,8 +20,8 @@ class AppRouter extends React.Component {
 		return (
 			<BrowserRouter>
 				<Switch>
-					{/* <PublicRoute component={Admin} patch={ROUTES.ADMIN} exact={true} /> */}
 					<PublicRoute component={Main} patch={ROUTES.MAIN}exact={true} />
+					<PublicRoute component={Admin} patch={ROUTES.ADMIN} exact={true} />
 				</Switch>
 			</BrowserRouter>
 		);

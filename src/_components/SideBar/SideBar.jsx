@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from '@emotion/styled';
-import logoIdeal from '../../_assets/img/logo_Ideal.png'
+import logoIdeal from '../../_assets/img/logo deal.png'
 
 const IMGWrapper = styled.img`
    margin: 30px 30px 0 50px ;
@@ -45,7 +45,7 @@ class NavBar extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-					<IMGWrapper src={logoIdeal} height="50px" width="auto" alt=""/>
+					<IMGWrapper src={logoIdeal} height="90px" width="auto" alt=""/>
 				<SideBarWrapper>
 					<ul>
 						<li>

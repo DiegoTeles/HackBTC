@@ -7,11 +7,9 @@ import { connect } from 'react-redux';
 /* Components */
 import NavBar from '../NavBar';
 
-import perfilImg from '../../_assets/img/22.png';
-import PostContainer from '../PostContainer'
-import EventAtendee from '../EventAtendee';
-import Footer from '../Footer'
+import perfilImg from '../../_assets/img/adm2.jpeg';
 import AdminBar from '../AdminBar';
+import SimpleLineChart from '../SimpleLineChart'
 
 
 // import NavPoints from '../NavPoints'
@@ -29,7 +27,7 @@ const SectionWrapper = styled.section`
 `;
 
 const IMGWrapper = styled.img`
-	width: 180px;
+	width: auto;
 	height: 180px;
 	-webkit-box-shadow: -8px 9px 19px -16px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: -8px 9px 19px -16px rgba(0, 0, 0, 0.75);
@@ -51,23 +49,14 @@ const H3Wrapper = styled.h3`
 
 const H2Wrapper = styled.h2`
 	font-size: 16px;
-	/* line-height: 2px; */
 	color: green;
 	font-weight: bold;
     margin-bottom: 50px;
 `;
-const ContainerWrapper = styled.section`
-    display: flex;
-    /* justify-content: space-around; */
-`;
-
 class ShowContentAdmin extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			showCard_1: true,
-			showCard_2: false,
-			showCard_3: false,
 			sugestion: null,
 		};
 
@@ -87,40 +76,20 @@ class ShowContentAdmin extends React.Component {
 		}
 	}
 
-	handleClick(type, evt) {
-		evt.preventDefault();
-
-		switch (type) {
-			case 'valueAvaliable':
-				this.active = 'valueAvaliable';
-				break;
-			case 'futureValue':
-				this.active = 'futureValue';
-				break;
-			default:
-				this.active = 'eventResult';
-		}
-
-		this.setState({
-			...this.state,
-			showCard_1: type === 'eventResult' ? true : false,
-			showCard_2: type === 'valueAvaliable' ? true : false,
-			showCard_3: type === 'futureValue' ? true : false,
-		});
-	}
+	
 
 	render() {
 		
-		const { sugestion, totalSusg } = this.state;
 		return (
 			<React.Fragment>
                 <NavBar />					
 				<SectionWrapper>
 					<IMGWrapper src={perfilImg} alt='' />
-					<H4Wrapper>Administrador</H4Wrapper>
+					<H4Wrapper>Matheus Catossi</H4Wrapper>
 					<H3Wrapper>Head Execute</H3Wrapper>
 					<H2Wrapper> </H2Wrapper>
                     <AdminBar />
+					<SimpleLineChart />
 				</SectionWrapper>				
 			</React.Fragment>
 		);

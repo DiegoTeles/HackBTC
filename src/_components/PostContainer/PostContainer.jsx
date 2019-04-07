@@ -67,6 +67,8 @@ class PostContainer extends React.Component {
 				sugestion: sugestion,
 				susg: '',
 				id: 'SieV9jMVEs',
+				tag1: 'Cais retaguarda gate',
+				tag2: 'Desperdicio de tempo'
 			});
 		}
 	}
@@ -89,11 +91,12 @@ class PostContainer extends React.Component {
 		const texto = {
 			susg: this.state.susg,
 			id: this.state.id,
+			tag1: this.state.tag1,
+			tag2: this.state.tag2,
 		};
 
 		axios.post(`https://playground.concore.io/sugestion`, { texto }).then(res => {
-			console.log(res);
-			console.log(res.data);
+
 		});
 	};
 

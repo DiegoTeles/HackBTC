@@ -6,16 +6,9 @@ import { connect } from 'react-redux';
 /* Components */
 import NavBar from '../../_components/NavBar';
 
-import perfilImg from '../../_assets/img/22.png';
+import perfilImg from '../../_assets/img/func.jpg';
 import PostContainer from '../PostContainer'
 import EventAtendee from '../EventAtendee';
-import Footer from '../Footer'
-import AdminBar from '../AdminBar';
-
-
-// import NavPoints from '../NavPoints'
-/* Placeholder */
-// import ShowContentPlaceholder from './ShowContentPlaceholder';
 
 const SectionWrapper = styled.section`
 	/* border: 4px solid red; */
@@ -49,7 +42,7 @@ const H3Wrapper = styled.h3`
 `;
 
 const H2Wrapper = styled.h2`
-	font-size: 16px;
+	font-size: 19px;
 	/* line-height: 2px; */
 	color: green;
 	font-weight: bold;

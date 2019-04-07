@@ -11,22 +11,11 @@ const AdminWrapper = styled.section`
 		justify-content: center;
 		border-bottom: 2px solid #45A4C2;
 
-		& ul {
-			display: flex;
-			margin-bottom: 0;
-
-			& a {
-				padding: 10px 30px;
-				font-size: 20px;
-				font-weight: 400;
-			}
+		h3 {
+			font-weight: 400;
 		}
 	}
-
-	li {
-		list-style: none;
-	}
-`
+`;
 
 
 
@@ -42,17 +31,7 @@ export default class Footer extends React.Component {
 			<React.Fragment>
 				<AdminWrapper>
 					<nav className="admin-container">
-							<ul>
-								<li>
-									<a href="#">Setor</a>
-								</li>
-								<li>
-									<a  href="#">Cais</a>
-								</li>
-								<li>
-									<a  href="#">Gate</a>
-								</li>
-							</ul>
+							<h3>Demografico</h3>
 					</nav>
 				</AdminWrapper>				
 			</React.Fragment>			
