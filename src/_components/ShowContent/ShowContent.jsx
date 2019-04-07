@@ -17,7 +17,7 @@ import Footer from '../Footer'
 
 const SectionWrapper = styled.section`
 	/* border: 4px solid red; */
-	padding: 0px;
+	padding: 0px 30px 0 30px;
 	justify-content: center;
 	text-align: center;
 	align-content: center;
@@ -55,7 +55,7 @@ const H2Wrapper = styled.h2`
 `;
 const ContainerWrapper = styled.section`
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 `;
 
 class ShowContent extends React.Component {

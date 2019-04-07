@@ -8,11 +8,16 @@ const SectionWrapper = styled.section`
 	/* background: #f9f8f8; */
 	text-align: center;
 	width: 55%;
-	height: 300px;
+	height: 250px;
 	/* margin-bottom: 300px; */
 
 	h4 {
 		text-align: left;
+	}
+
+	.text-pub{
+		margin-right: auto;
+	  margin: 20px;
 	}
 `;
 
@@ -62,7 +67,7 @@ class PostContainer extends React.Component {
 					</Fragment> 
 
                     </TextAreaWrapper>
-					<h4><i class="fas fa-clipboard-list"></i> Publicaçoes antigas</h4>
+					<h4 className="text-pub"><i class="fas fa-clipboard-list"></i> Publicaçoes antigas</h4>
 					<PostContent>
 					<CardPost
 						className='card card__repass'

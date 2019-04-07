@@ -14,6 +14,7 @@ width: 85%;
 	align-items: center;
 	box-shadow: 0 0 20px rgba(0,0,0,0.6);
 	color: #333;
+	z-index: 999;
 
 	.navigation {
 		display: flex;
