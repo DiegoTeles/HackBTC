@@ -67,25 +67,24 @@ class ShowContent extends React.Component {
 			showCard_1: true,
 			showCard_2: false,
 			showCard_3: false,
-			
+			sugestion: null,
 		};
 
 		this.active = 'eventResult';
 	}
 
-	// componentDidUpdate(prevProps) {
-	// 	if (prevProps !== this.props) {
-	// 		const { sugestion} = this.props;
-
-	// 		if (event && deductions && amounts) {
-	// 			if (repayment.data !== 0) {
-	// 				this.calcRepayment(repayment.total_repayment, repayment.total_antecipation);
-	// 				return;
-	// 			}
-	// 			this.calcRepayment(0, 0);
-	// 		}
-	// 	}
-	// }
+	componentDidUpdate(prevProps) {
+		if (prevProps !== this.props) {
+			// const res = this.props.eventList;
+			const { sugestion } = this.props;
+			const totalSusg = sugestion.length *10
+			this.setState({
+				...this.state,
+				sugestion: sugestion,
+				totalSusg: totalSusg
+			});
+		}
+	}
 
 	handleClick(type, evt) {
 		evt.preventDefault();
@@ -111,7 +110,7 @@ class ShowContent extends React.Component {
 
 	render() {
 		
-
+		const { sugestion, totalSusg } = this.state;
 		return (
 			<React.Fragment>
                 <NavBar />					
@@ -119,7 +118,7 @@ class ShowContent extends React.Component {
 					<IMGWrapper src={perfilImg} alt='' />
 					<H4Wrapper>Diego Telles</H4Wrapper>
 					<H3Wrapper>CFO Execute Service</H3Wrapper>
-					<H2Wrapper>30 CTPoints</H2Wrapper>
+					<H2Wrapper>{totalSusg} CTPoints</H2Wrapper>
                     <ContainerWrapper>
                     <PostContainer />
                     <EventAtendee />
@@ -134,14 +133,10 @@ class ShowContent extends React.Component {
 /* Map State to Props/Childrens */
 function mapStateToProps(state) {
 	const { sugestion } = state.event;
-
-	console.log('oi',state)
-
 	let data = {
-		event:  null,
-		amounts:  null,
+		sugestion:  sugestion,
 	};
-
+	
 	return data;
 }
 

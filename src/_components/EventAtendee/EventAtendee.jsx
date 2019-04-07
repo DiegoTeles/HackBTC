@@ -34,7 +34,6 @@ class EventAtendee extends React.Component {
 		if (prevProps !== this.props) {
 			// const res = this.props.eventList;
 			const { sugestion, event } = this.props;
-			console.log('foda', this.props);
 			this.setState({
 				...this.state,
 				event: event,

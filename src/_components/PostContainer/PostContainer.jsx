@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import styled from '@emotion/styled';
 import { MDBBtn } from 'mdbreact';
+import axios from 'axios';
 
 import CardPost from '../CardPost';
 
@@ -66,17 +67,39 @@ class PostContainer extends React.Component {
 			this.setState({
 				...this.state,
 				sugestion: sugestion,
+				susg: '',
+				id: 'SieV9jMVEs'
 			});
 		}
 	}
 
 	componentDidMount() {
 		this.getSugestion();
+
 	}
 	getSugestion() {
 		const { dispatch } = this.props;
 		dispatch(eventActions.sugestion());
 	}
+
+	handleChange = event => {
+		this.setState({ susg: event.target.value });
+	  }
+	
+	  handleSubmit = event => {
+		event.preventDefault();
+	
+		const texto = {
+			susg: this.state.susg,
+			id: this.state.id
+		};
+	
+		axios.post(`https://playground.concore.io/sugestion`, { texto })
+		  .then(res => {
+			console.log(res);
+			console.log(res.data);
+		  })
+	  }
 
 	render() {
 		const { sugestion } = this.state;
@@ -87,13 +110,15 @@ class PostContainer extends React.Component {
 						<i className='far fa-edit' /> Sugestões
 					</h4>
 					<TextAreaWrapper>
-						<textarea name='' id='' cols='70' placeholder='Deixe aqui uma sugestão...' rows='7' />
+					<form onSubmit={this.handleSubmit}>
+						<textarea name='' id='' name="susg" onChange={this.handleChange}  cols='70' placeholder='Deixe aqui uma sugestão...' rows='7' required/>
 
 						<Fragment>
-							<MDBBtn className='button-send' color='info'>
+							<MDBBtn type="submit" className='button-send' color='info'>
 								Enviar
-							</MDBBtn>
+							</MDBBtn >
 						</Fragment>
+						</form>
 					</TextAreaWrapper>
 					<h4 className='text-pub'>
 						<i className='fas fa-clipboard-list' /> Publicaçoes antigas
