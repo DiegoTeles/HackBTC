@@ -1,25 +1,38 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from '@emotion/styled';
+import logoIdeal from '../../_assets/img/logo_Ideal.png'
 
+const IMGWrapper = styled.img`
+   margin: 30px 30px 0 50px ;
+`;
 const SideBarWrapper = styled.section`
 	padding:  30px 0 0 20px;
-	margin-top: 200px;
+	margin-top: 130px;
 
 	li {
-		color: white;
-		font-size: 16px;
-		padding: 5px ;
-		/* line-height: 16px; */
+		display: flex;
+		align-items:center;
+		color: #F6F6F6;
 		transform: uppercase;
-		text-decoration: none;
-		list-style:none;
 		font-family: "Open Sans", sans-serif;
-		cursor: pointer;
 
-		li:hover{
-			background: blue;
+		& i {
+			color: #45A4C2;
+			font-size: 20px;
 		}
+
+		& a {
+			display: block;
+			padding: 10px 20px;
+			color: #f6f6f6;
+			font-weight: 400;
+
+			&:hover {
+				color: #b5cc4e;
+			}
+		}	
+
 	}
 `;
 
@@ -33,13 +46,29 @@ class NavBar extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
+					<IMGWrapper src={logoIdeal} height="50px" width="auto" alt=""/>
 				<SideBarWrapper>
 					<ul>
-						<li><i className="fas fa-home"></i> Home</li>
-						<li><i className="fas fa-wallet"></i> PONTOS</li>
-						<li><i className="far fa-edit"></i>  SUGESTOES CADASTRADAS</li>
-						<li><i className="fas fa-child"></i> DESAFIOS</li>
-						<li><i className="far fa-calendar-alt"></i>  EVENTOS</li>
+						<li>
+							<i class="fas fa-home"></i> 
+							<a href="#">HOME</a>
+						</li>
+						<li>
+							<i class="fas fa-wallet"></i>
+							<a href="#">PONTOS</a>							
+						</li>
+						<li>
+							<i class="far fa-edit"></i>
+							<a href="#">TODAS SUGESTOES</a>							
+						</li>
+						<li>
+							<i class="fas fa-child"></i>
+							<a href="#">DESAFIOS</a>
+						</li>
+						<li>
+							<i class="far fa-calendar-alt"></i>
+							<a href="#">EVENTOS</a>
+						</li>
 					</ul>
 				</SideBarWrapper>
 			</React.Fragment>

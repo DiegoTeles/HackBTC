@@ -32,7 +32,7 @@ const TextAreaWrapper = styled.div`
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-
+	margin-bottom: 20px;
 	textarea {
 		padding: 5px 0 0 10px;
 	}
@@ -44,8 +44,7 @@ const TextAreaWrapper = styled.div`
 	}
 `;
 const PostContent = styled.div`
-	padding-top: 30px;
-	margin-bottom: 30px;
+	padding: 30px;
 	background: #f9f8f8;
 	text-align: center;
 	height: 300px;
@@ -68,14 +67,13 @@ class PostContainer extends React.Component {
 				...this.state,
 				sugestion: sugestion,
 				susg: '',
-				id: 'SieV9jMVEs'
+				id: 'SieV9jMVEs',
 			});
 		}
 	}
 
 	componentDidMount() {
 		this.getSugestion();
-
 	}
 	getSugestion() {
 		const { dispatch } = this.props;
@@ -84,22 +82,21 @@ class PostContainer extends React.Component {
 
 	handleChange = event => {
 		this.setState({ susg: event.target.value });
-	  }
-	
-	  handleSubmit = event => {
+	};
+
+	handleSubmit = event => {
 		event.preventDefault();
-	
+
 		const texto = {
 			susg: this.state.susg,
-			id: this.state.id
+			id: this.state.id,
 		};
-	
-		axios.post(`https://playground.concore.io/sugestion`, { texto })
-		  .then(res => {
+
+		axios.post(`https://playground.concore.io/sugestion`, { texto }).then(res => {
 			console.log(res);
 			console.log(res.data);
-		  })
-	  }
+		});
+	};
 
 	render() {
 		const { sugestion } = this.state;
@@ -110,14 +107,23 @@ class PostContainer extends React.Component {
 						<i className='far fa-edit' /> Sugestões
 					</h4>
 					<TextAreaWrapper>
-					<form onSubmit={this.handleSubmit}>
-						<textarea name='' id='' name="susg" onChange={this.handleChange}  cols='70' placeholder='Deixe aqui uma sugestão...' rows='7' required/>
+						<form onSubmit={this.handleSubmit}>
+							<textarea
+								name=''
+								id=''
+								name='susg'
+								onChange={this.handleChange}
+								cols='70'
+								placeholder='Deixe aqui uma sugestão...'
+								rows='7'
+								required
+							/>
 
-						<Fragment>
-							<MDBBtn type="submit" className='button-send' color='info'>
-								Enviar
-							</MDBBtn >
-						</Fragment>
+							<Fragment>
+								<MDBBtn type='submit' className='button-send' color='info'>
+									Enviar
+								</MDBBtn>
+							</Fragment>
 						</form>
 					</TextAreaWrapper>
 					<h4 className='text-pub'>

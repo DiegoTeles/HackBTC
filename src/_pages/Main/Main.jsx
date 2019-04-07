@@ -10,32 +10,21 @@ import SideBar from '../../_components/SideBar';
 import ShowContent from '../../_components/ShowContent';
 /*  Styles */
 const MainWrapper = styled.div`
-	position: relative;
-	/* background: #f3f2f3; */
+	display: flex;
 `;
 
 const LabelBar = styled.div`
 	position: fixed;
 	width: 15%;
 	height: 100%;
-	float: left;
 	background: #333333;
 `;
 
 const ContentWrapper = styled.section`
-	/* margin-right: 200px; */
-	
-	float: right;
 	width: 85%;
-	min-height: 720px;
-	height: 720px;
-
+	margin-left: 15%;
 `;
 
-// const ContainerPost = styled.section`
-// 	/* margin: 60%; */
-// 	background: #f7f6f6;
-// `;
 class Main extends Component {
 	constructor(props) {
 		super(props);

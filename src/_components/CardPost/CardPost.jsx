@@ -2,34 +2,35 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const ContainerWrapper = styled.div`
-	width: 80%;
-	justify-content: center;
-	align-content: center;
-	margin-left: 10%;
-	padding-bottom: 20px;
-	h4 {
-		font-size: 15px;
-		font-weight: 300;
-		padding: 0 30px 0 30px;
-		margin-top: 16px;
-		margin-bottom: 4px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-radius: 4px;
+	overflow: hidden;
+	border: 2px solid #45A4C2;
+	margin-bottom: 20px;
+	h2 {
+		font-size: 16px;
+		margin: 10px;
 	}
-	h3 {
-		padding: 0 30px 0 0;
-		font-size: 15px;
-		font-weight: bold;
-		text-align: right;
-		margin-top: 16px;
-		/* margin-bottom: 4px; */
-	}
-	h5 {
-		padding: 0 30px 0 10px;
-		margin: 0 10px 0 10px;
-		font-size: 12px;
-		/* font-weight: bold; */
-		color: gray;
-		text-align: right;
-		margin-bottom: 4px;
+
+	.card-info {
+		background: #45A4C2;
+		color: #f6f6f6;
+		padding: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		& p {
+			margin: 0;
+			font-weight: 500;
+		}
+
+		& span {
+			font-size: 12px;
+			min-width: 80px;
+		}
 	}
 `;
 
@@ -38,8 +39,10 @@ export default props => (
 		onClick={props.click}
 		className={props.className}
 		marginRight={props.marginRight}>
-		<h4>{props.post}</h4>
-		<h3>{props.namePost}</h3>
-		<h5>{props.datePost}</h5>
+		<h2>{props.post}</h2>
+		<div className="card-info">
+			<p>{props.namePost}</p>
+			<span>{props.datePost}</span>
+		</div>
 	</ContainerWrapper>
 );

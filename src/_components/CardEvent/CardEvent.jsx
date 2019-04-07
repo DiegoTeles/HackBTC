@@ -2,9 +2,12 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const ContainerWrapper = styled.div`
-	padding: 10px 10px;
+	padding: 20px;
 	color: #333;
+	min-width: 90px;
+	width: 480px;
 
+	margin-bottom: 20px;
 	h4 {
 		text-transform: uppercase;
 		font-size: 16px;
