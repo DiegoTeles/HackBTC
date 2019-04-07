@@ -4,18 +4,18 @@ import styled from '@emotion/styled';
 const ContainerWrapper = styled.div`
 	padding: 20px;
 	color: #333;
-	min-width: 90px;
-	width: 480px;
-
+	min-width: 500px;
 	margin-bottom: 20px;
+
 	h4 {
+		text-align: left;
 		text-transform: uppercase;
 		font-size: 16px;
 		font-weight: 400;
-		line-height: 24px;
 		margin-top: 16px;
 		padding-bottom: 20px;
 		border-bottom: 1px solid rgba(0,0,0, 0.1);
+		min-height: 150px
 	}
 	h5 {
 		font-size: 16px;
