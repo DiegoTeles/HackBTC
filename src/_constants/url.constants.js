@@ -1,3 +1,3 @@
 export const URL = {
-    BASEURL: 'https://kline.concore.io/'
+    BASEURL: 'https://playground.concore.io/'
 }

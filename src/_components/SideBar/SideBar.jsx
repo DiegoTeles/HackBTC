@@ -35,11 +35,11 @@ class NavBar extends React.Component {
 			<React.Fragment>
 				<SideBarWrapper>
 					<ul>
-						<li><i class="fas fa-home"></i> Home</li>
-						<li><i class="fas fa-wallet"></i> PONTOS</li>
-						<li><i class="far fa-edit"></i>  SUGESTOES CADASTRADAS</li>
-						<li><i class="fas fa-child"></i> DESAFIOS</li>
-						<li><i class="far fa-calendar-alt"></i>  EVENTOS</li>
+						<li><i className="fas fa-home"></i> Home</li>
+						<li><i className="fas fa-wallet"></i> PONTOS</li>
+						<li><i className="far fa-edit"></i>  SUGESTOES CADASTRADAS</li>
+						<li><i className="fas fa-child"></i> DESAFIOS</li>
+						<li><i className="far fa-calendar-alt"></i>  EVENTOS</li>
 					</ul>
 				</SideBarWrapper>
 			</React.Fragment>
@@ -49,10 +49,10 @@ class NavBar extends React.Component {
 
 /* Map State to Props/Childrens */
 function mapStateToProps(state) {
-	const { event } = state;
+	const { sugestion } = state;
 
 	return {
-		event: event,
+		sugestion: sugestion,
 	};
 }
 

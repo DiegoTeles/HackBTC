@@ -3,45 +3,74 @@ import { connect } from 'react-redux';
 import styled from '@emotion/styled';
 import CardEvent from '../CardEvent';
 
-const SectionWrapper = styled.section`
-h4{
-	  text-align: left;
-	  margin-left: 75px;
-	  margin-right: auto;
-	  margin-bottom: 20px;
-  }
-.event-container {
-	background: #f9f8f8;
-	text-align: center;
-  width: 90%;
-  padding: 30px;
-  margin-left: auto;
+import { eventActions } from '../../_actions';
 
-  
-}
+const SectionWrapper = styled.section`
+	h4 {
+		text-align: left;
+		margin-left: 75px;
+		margin-right: auto;
+		margin-bottom: 20px;
+	}
+	.event-container {
+		background: #f9f8f8;
+		text-align: center;
+		width: 90%;
+		padding: 30px;
+		margin-left: auto;
+	}
 `;
 
 class EventAtendee extends React.Component {
 	constructor(props) {
 		super(props);
 		this.props = props;
-		this.state = {};
+		this.state = {
+			event: null,
+		};
+	}
+
+	componentDidUpdate(prevProps) {
+		if (prevProps !== this.props) {
+			// const res = this.props.eventList;
+			const { sugestion, event } = this.props;
+			console.log('foda', this.props);
+			this.setState({
+				...this.state,
+				event: event,
+			});
+		}
+	}
+
+	componentDidMount() {
+		this.getEvent();
+	}
+	getEvent() {
+		const { dispatch } = this.props;
+		dispatch(eventActions.event());
 	}
 
 	render() {
+		const { event } = this.state;
 		return (
 			<React.Fragment>
 				<SectionWrapper>
-
-	        <h4><i class="far fa-calendar-alt"></i> Eventos</h4>
-	        <section className="event-container">
-						<CardEvent
-	              className='card card__repass'
-	              evento='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni ex at vitae quia, tempore quam.'
-	              name='Diego'
-	              data="10/06/19"
-	          />
-	        </section>
+					<h4>
+						<i className='far fa-calendar-alt' /> Eventos
+					</h4>
+					<section className='event-container'>
+						{event &&
+							event.map((item, index) => {
+								return (
+									<CardEvent key={index}
+										className='card card__repass'
+										evento={item.atoms.event_name}
+										name='Diego'
+										data='10/06/19'
+									/>
+								);
+							})}
+					</section>
 				</SectionWrapper>
 			</React.Fragment>
 		);
@@ -52,9 +81,11 @@ class EventAtendee extends React.Component {
 function mapStateToProps(state) {
 	const { event } = state;
 
-	return {
-		event: event,
+	let data = {
+		event: event.event,
 	};
+
+	return data;
 }
 
 // the way to connect a component to redux is
