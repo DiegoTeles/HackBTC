@@ -10,6 +10,8 @@ import perfilImg from '../../_assets/img/22.png';
 import PostContainer from '../PostContainer'
 import EventAtendee from '../EventAtendee';
 import Footer from '../Footer'
+import AdminBar from '../AdminBar';
+
 
 // import NavPoints from '../NavPoints'
 /* Placeholder */
@@ -170,12 +172,15 @@ class ShowContent extends React.Component {
 					<H4Wrapper>Diego Telles</H4Wrapper>
 					<H3Wrapper>CFO Execute Service</H3Wrapper>
 					<H2Wrapper>30 CTPoints</H2Wrapper>
+					<AdminBar />													
+					
                     <ContainerWrapper>
                     <PostContainer />
                     <EventAtendee />
                     </ContainerWrapper>
+
 					{/* <Footer /> */}
-				</SectionWrapper>
+				</SectionWrapper>				
 			</React.Fragment>
 		);
 	}
