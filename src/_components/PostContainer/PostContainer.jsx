@@ -23,6 +23,11 @@ const SectionWrapper = styled.section`
 		margin-right: auto;
 		margin: 20px;
 	}
+	form{
+		align-items: center;
+		flex-direction: inherit;
+		display: flex;
+	}
 `;
 
 const TextAreaWrapper = styled.div`
@@ -35,13 +40,14 @@ const TextAreaWrapper = styled.div`
 	margin-bottom: 20px;
 	textarea {
 		padding: 10px;
-		max-width: 450px;
+		max-width: 850px;
 	}
 	.button-send {
 		margin-top: 20px;
 		width: 150px;
 		border-radius: 80px;
 		align-self: flex-end;
+		margin-right: 40px;
 	}
 
 `;
@@ -157,7 +163,7 @@ class PostContainer extends React.Component {
 /* Map State to Props/Childrens */
 function mapStateToProps(state) {
 	const { sugestion } = state.event;
-
+	console.log('o',state )
 	let data = {
 		sugestion: sugestion,
 	};

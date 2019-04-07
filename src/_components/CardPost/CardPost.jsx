@@ -6,7 +6,7 @@ const ContainerWrapper = styled.div`
 	justify-content: space-between;
 	border-radius: 4px 4px 0 0;
 	overflow: hidden;
-	border: 2px solid #45A4C2;
+	border: 2px solid #45a4c2;
 	box-shadow: none;
 	h2 {
 		font-size: 16px;
@@ -15,7 +15,7 @@ const ContainerWrapper = styled.div`
 	}
 
 	.card-info {
-		background: #45A4C2;
+		background: #45a4c2;
 		color: #f6f6f6;
 		padding: 2px;
 		display: flex;
@@ -23,9 +23,9 @@ const ContainerWrapper = styled.div`
 		justify-content: space-around;
 		align-items: center;
 		font-size: 12px;
-		
+
 		& > div {
-			display:flex;
+			display: flex;
 			align-items: center;
 		}
 
@@ -38,36 +38,34 @@ const ContainerWrapper = styled.div`
 			font-size: 12px;
 		}
 
-		.info-post{
+		.info-post {
 			width: 100%;
 		}
 
 		& i {
 			margin: 0 5px;
 		}
-
 	}
 `;
 
 const BadgeWrapper = styled.div`
-	
-		.tags {
-			background: #45A4C2;
-			margin-bottom: 20px;
-			border-radius: 0 0 4px 4px;
-			font-size: 10px;
-			border-top: 1px solid #f6f6f6;
-			padding: 3px;
-			font-weight: 500;
+	.tags {
+		background: #45a4c2;
+		margin-bottom: 20px;
+		border-radius: 0 0 4px 4px;
+		font-size: 10px;
+		border-top: 1px solid #f6f6f6;
+		padding: 3px;
+		font-weight: 500;
 
-			& span {
-				color: #45A4C2;
-				background: #f6f6f6;
-				padding: 2px 5px;
-				border-radius: 50px;
-				margin: 5px;
-			}
+		& span {
+			color: #45a4c2;
+			background: #f6f6f6;
+			padding: 2px 5px;
+			border-radius: 50px;
+			margin: 5px;
 		}
+	}
 `;
 
 export default props => (
@@ -76,30 +74,27 @@ export default props => (
 			onClick={props.click}
 			className={props.className}
 			marginRight={props.marginRight}>
-				<h2>{props.post}</h2>
-			<div className="card-info">
+			<h2>{props.post}</h2>
+			<div className='card-info'>
 				<div>
-					<i class="far fa-calendar-alt"></i>
+					<i className='far fa-calendar-alt' />
 					<span>{props.datePost}</span>
 				</div>
 
 				<div>
-					<i class="fas fa-user"></i>
+					<i className='fas fa-user' />
 					<p>{props.namePost}</p>
-				</div>				
+				</div>
 			</div>
+			<button onClick={props.sum}>5</button>
 		</ContainerWrapper>
 
 		<BadgeWrapper>
-			<div className="tags">
-				<span>
-					{props.tag}
-				</span>
+			<div className='tags'>
+				<span>{props.tag}</span>
 
-				<span>
-					{props.tag}
-				</span>
+				<span>{props.tag}</span>
 			</div>
 		</BadgeWrapper>
-	</React.Fragment>	
+	</React.Fragment>
 );

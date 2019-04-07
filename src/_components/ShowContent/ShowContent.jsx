@@ -110,8 +110,8 @@ class ShowContent extends React.Component {
                 <NavBar />					
 				<SectionWrapper>
 					<IMGWrapper src={perfilImg} alt='' />
-					<H4Wrapper>Diego Telles</H4Wrapper>
-					<H3Wrapper>CFO Execute Service</H3Wrapper>
+					<H4Wrapper>Augusto Bondança</H4Wrapper>
+					<H3Wrapper>Especialista em Planilha</H3Wrapper>
 					<H2Wrapper>{totalSusg} CTPoints</H2Wrapper>
                     <ContainerWrapper>
                     <PostContainer />
