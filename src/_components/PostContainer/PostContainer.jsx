@@ -41,7 +41,7 @@ textarea {
 }
 `;
  const PostContent = styled.div`
- padding-top: 30px;
+ padding: 30px;
 	background: #f9f8f8;
 	text-align: center;
 	height: 300px;
@@ -71,7 +71,7 @@ class PostContainer extends React.Component {
 					<PostContent>
 					<CardPost
 						className='card card__repass'
-						post='Loren ypsun, nalari sun da masteraver irri'
+						post='Loren ypsun, nalari sun da masteraver irri Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, beatae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, voluptatibus.'
 						namePost='Diego Telles'
 						datePost ='02/03/2019'
 					/>

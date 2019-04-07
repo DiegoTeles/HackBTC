@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import styled from "@emotion/styled";
 import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
+import perfilImg from '../../_assets/img/22.png';
 
 const NavBarWrapper = styled.header`
 position: fixed;
@@ -121,13 +122,13 @@ class NavBar extends React.Component {
 								<span>2</span>
 							</div>
 						</div>
-            <div
-              src=""
+            <img
+              src={perfilImg}
               alt="Foto do usuário"
               className="user-image"
             >
-            </div>
-            <span class="user-name">Diego</span>
+            </img>
+            <span class="user-name">Diego Telles</span>
 					</nav>					
 				</NavBarWrapper>
 			</React.Fragment>

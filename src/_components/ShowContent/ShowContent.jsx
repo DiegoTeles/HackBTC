@@ -17,7 +17,7 @@ import Footer from '../Footer'
 
 const SectionWrapper = styled.section`
 	/* border: 4px solid red; */
-	padding: 0px 30px 0 30px;
+	padding: 30px;
 	justify-content: center;
 	text-align: center;
 	align-content: center;

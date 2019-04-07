@@ -4,21 +4,19 @@ import styled from '@emotion/styled';
 import CardEvent from '../CardEvent';
 
 const SectionWrapper = styled.section`
-h4{
-	  text-align: left;
-	  margin-left: 75px;
-	  margin-right: auto;
-	  margin-bottom: 20px;
-  }
-.event-container {
-	background: #f9f8f8;
-	text-align: center;
-  width: 90%;
-  padding: 30px;
-  margin-left: auto;
+	margin-left: 30px;
 
-  
-}
+	h4{
+		  text-align: left;
+		  margin-right: auto;
+		  margin-bottom: 20px;
+	  }
+	.event-container {
+		background: #f9f8f8;
+		text-align: center;
+	  padding: 30px;
+	  margin-left: auto;
+	}
 `;
 
 class EventAtendee extends React.Component {
