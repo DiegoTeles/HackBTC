@@ -7,17 +7,13 @@ import { eventActions } from '../../_actions';
 
 const SectionWrapper = styled.section`
 	margin-left: 30px;
-	margin-bottom: 20px;
-	h4{
+	.eventos{
 		  text-align: left;
-		  margin-right: auto;
 		  margin-bottom: 20px;
 	  }
 	.event-container {
 		background: #f9f8f8;
-		text-align: center;
 	  padding: 30px;
-	  margin-left: auto;
 	}
 `;
 
@@ -53,7 +49,7 @@ class EventAtendee extends React.Component {
 		return (
 			<React.Fragment>
 				<SectionWrapper>
-					<h4>
+					<h4 className="eventos">
 						<i className='far fa-calendar-alt' /> Eventos
 					</h4>
 					<section className='event-container'>

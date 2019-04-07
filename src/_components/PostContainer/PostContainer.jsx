@@ -34,7 +34,8 @@ const TextAreaWrapper = styled.div`
 	flex-direction: column;
 	margin-bottom: 20px;
 	textarea {
-		padding: 5px 0 0 10px;
+		padding: 10px;
+		max-width: 450px;
 	}
 	.button-send {
 		margin-top: 20px;
@@ -42,6 +43,7 @@ const TextAreaWrapper = styled.div`
 		border-radius: 80px;
 		align-self: flex-end;
 	}
+
 `;
 const PostContent = styled.div`
 	padding: 30px;
@@ -138,6 +140,7 @@ class PostContainer extends React.Component {
 										post={item.atoms.sugestion}
 										namePost={item.atoms.user_hack.user}
 										datePost='02/03/2019'
+										tag='operacional'
 									/>
 								);
 							})}
