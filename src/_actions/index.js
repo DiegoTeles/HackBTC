@@ -1,1 +1,1 @@
-export * from './event.actions';
+export * from './default.actions';

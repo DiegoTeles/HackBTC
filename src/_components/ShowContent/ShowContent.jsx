@@ -67,74 +67,25 @@ class ShowContent extends React.Component {
 			showCard_1: true,
 			showCard_2: false,
 			showCard_3: false,
-			repass: 0,
-			repaymentSum: 0,
-			antecipationSum: 0,
-			totalAvaliable: 0,
-			totalFuture: 0,
-			totalValues: 0,
+			
 		};
 
 		this.active = 'eventResult';
-
-		this.calcRepayment = this.calcRepayment.bind(this);
-		this.calcDeductions = this.calcDeductions.bind(this);
 	}
 
-	componentDidUpdate(prevProps) {
-		if (prevProps !== this.props) {
-			const { amounts, event, deductions, repayment } = this.props;
+	// componentDidUpdate(prevProps) {
+	// 	if (prevProps !== this.props) {
+	// 		const { sugestion} = this.props;
 
-			if (event && deductions && amounts) {
-				if (repayment.data !== 0) {
-					this.calcRepayment(repayment.total_repayment, repayment.total_antecipation);
-					return;
-				}
-				this.calcRepayment(0, 0);
-			}
-		}
-	}
-
-	calcDeductions() {
-		const { deductions } = this.props;
-
-		let deductionAmount = 0;
-		if (deductions) {
-			const { services, taxes } = deductions;
-
-			if (services) {
-				services.map(item => {
-					deductionAmount += item.extra.deduction;
-					return deductionAmount;
-				});
-			}
-
-			if (taxes) {
-				taxes.map(item => {
-					deductionAmount += item.extra.deduction;
-					return deductionAmount;
-				});
-			}
-		}
-
-		return deductionAmount;
-	}
-
-	calcRepayment(repaymentSum, antecipationSum) {
-		const { amounts } = this.props;
-
-		const deductions = this.calcDeductions();
-		const totalValues = amounts.net_value - deductions;
-		const totalAvaliable = amounts.avaliable_value - repaymentSum - deductions;
-		const totalFuture = amounts.future - antecipationSum;
-
-		this.setState({
-			...this.state,
-			totalValues: totalValues.toFixed(2),
-			totalAvaliable: totalAvaliable.toFixed(2),
-			totalFuture: totalFuture.toFixed(2),
-		});
-	}
+	// 		if (event && deductions && amounts) {
+	// 			if (repayment.data !== 0) {
+	// 				this.calcRepayment(repayment.total_repayment, repayment.total_antecipation);
+	// 				return;
+	// 			}
+	// 			this.calcRepayment(0, 0);
+	// 		}
+	// 	}
+	// }
 
 	handleClick(type, evt) {
 		evt.preventDefault();
@@ -159,8 +110,7 @@ class ShowContent extends React.Component {
 	}
 
 	render() {
-		const { totalValues, totalFuture, totalAvaliable } = this.state;
-		const { amounts, event } = this.props;
+		
 
 		return (
 			<React.Fragment>
@@ -183,13 +133,13 @@ class ShowContent extends React.Component {
 
 /* Map State to Props/Childrens */
 function mapStateToProps(state) {
-	const { deductions, amount, repayment } = state.event;
+	const { sugestion } = state.event;
+
+	console.log('oi',state)
 
 	let data = {
-		event: amount ? amount.event : null,
-		amounts: amount ? amount.event.atoms.amounts : null,
-		repayment,
-		deductions,
+		event:  null,
+		amounts:  null,
 	};
 
 	return data;

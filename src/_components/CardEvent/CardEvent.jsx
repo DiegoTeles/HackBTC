@@ -44,11 +44,11 @@ export default (props) => (
 		<h4>{props.evento}</h4>
 		<div className="info">
 			<div className="data">
-				<i class="far fa-calendar-alt"></i>
+				<i className="far fa-calendar-alt"></i>
 				<span>{props.data}</span>
 			</div>
 			<div className="user">
-				<i class="fas fa-user"></i>
+				<i className="fas fa-user"></i>
 				<h5>{props.name}</h5>
 			</div>
 		</div>

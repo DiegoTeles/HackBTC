@@ -32,10 +32,10 @@ const ContentWrapper = styled.section`
 
 `;
 
-const ContainerPost = styled.section`
-	/* margin: 60%; */
-	background: #f7f6f6;
-`;
+// const ContainerPost = styled.section`
+// 	/* margin: 60%; */
+// 	background: #f7f6f6;
+// `;
 class Main extends Component {
 	constructor(props) {
 		super(props);

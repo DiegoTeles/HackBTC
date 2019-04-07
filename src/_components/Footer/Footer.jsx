@@ -12,13 +12,7 @@ const SectionWrapper = styled.section`
 
 `;
 
-const H3Wrapper = styled.h3`
-    /* float: left; */
-`;
 
-const H4Wrapper = styled.h4`
-    /* float: right; */
-`;
 
 class Footer extends React.Component {
 	constructor(props) {

@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import styled from "@emotion/styled";
-import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
+// import { MDBDropdown, MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
 
 const NavBarWrapper = styled.header`
 position: fixed;
@@ -116,7 +116,7 @@ class NavBar extends React.Component {
 					<a href="#"></a>
 					<nav className="navigation">
 						<div className="notification">
-							<i class="fas fa-bell"></i>
+							<i className="fas fa-bell"></i>
 							<div className="notification-badge">
 								<span>2</span>
 							</div>
@@ -127,7 +127,7 @@ class NavBar extends React.Component {
               className="user-image"
             >
             </div>
-            <span class="user-name">Diego</span>
+            <span className="user-name">Diego</span>
 					</nav>					
 				</NavBarWrapper>
 			</React.Fragment>
