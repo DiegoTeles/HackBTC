@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 // import ToggleDisplay from 'react-toggle-display';
 
 /* Components */
+import NavBar from '../../_components/NavBar';
+
 import perfilImg from '../../_assets/img/22.png';
 import PostContainer from '../PostContainer'
 import EventAtendee from '../EventAtendee';
@@ -13,12 +15,12 @@ import EventAtendee from '../EventAtendee';
 // import ShowContentPlaceholder from './ShowContentPlaceholder';
 
 const SectionWrapper = styled.section`
-	border: 4px solid red;
-	padding: 20px;
+	/* border: 4px solid red; */
+	padding: 0px;
 	justify-content: center;
 	text-align: center;
 	align-content: center;
-    margin: 70px 0 70px 0;
+    margin: 140px 0 70px 0;
 `;
 
 const IMGWrapper = styled.img`
@@ -160,6 +162,7 @@ class ShowContent extends React.Component {
 
 		return (
 			<React.Fragment>
+                <NavBar />					
 				<SectionWrapper>
 					<IMGWrapper src={perfilImg} alt='' />
 					<H4Wrapper>Diego Telles</H4Wrapper>

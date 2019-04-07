@@ -6,7 +6,6 @@ import styled from '@emotion/styled';
 // import { eventActions } from "../../_actions";
 
 /* Components */
-import NavBar from '../../_components/NavBar';
 import SideBar from '../../_components/SideBar';
 import ShowContent from '../../_components/ShowContent';
 import PostContainer from '../../_components/PostContainer'
@@ -51,7 +50,6 @@ class Main extends Component {
 		return (
 			<MainWrapper>
 				<LabelBar>
-					{/* <NavBar /> */}
 					<SideBar />
 				</LabelBar>
 				<ContentWrapper>
