@@ -28,18 +28,18 @@ const getSugestion = (id, query={}) => {
  * @return Promise
  */
 const getEvent = (id, query={}) => {
-    console.log('Get')
     return api.get(`event`, query);
 };
 
-// const setRepayment = (id, data, query={}) => {
-//     return api.post(`event/${id}/repayment`, data, query);
+// const setSugestion = (id, data, query={}) => {
+//     return api.post(`user/${id}/sugestion`, data, query);
 // };
 
 /* Constant object to represent Service Functions */
 export const eventService = {
     data,
     getSugestion,
-    getEvent
+    getEvent,
+    // setSugestion
     
 };

@@ -73,7 +73,6 @@ const event = (id, filters) => {
     return dispatch => {
         eventService.getEvent(id, filters).then(
             response => {
-                console.log('resp', response)
                 dispatch(success(response));
             },
             error => {
