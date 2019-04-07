@@ -1,10 +1,11 @@
+
 import React from 'react';
 import styled from '@emotion/styled';
 import { connect } from 'react-redux';
 // import ToggleDisplay from 'react-toggle-display';
 
 /* Components */
-import NavBar from '../../_components/NavBar';
+import NavBar from '../NavBar';
 
 import perfilImg from '../../_assets/img/22.png';
 import PostContainer from '../PostContainer'
@@ -60,10 +61,9 @@ const ContainerWrapper = styled.section`
     /* justify-content: space-around; */
 `;
 
-class ShowContent extends React.Component {
+class ShowContentAdmin extends React.Component {
 	constructor(props) {
 		super(props);
-
 		this.state = {
 			showCard_1: true,
 			showCard_2: false,
@@ -117,15 +117,10 @@ class ShowContent extends React.Component {
                 <NavBar />					
 				<SectionWrapper>
 					<IMGWrapper src={perfilImg} alt='' />
-					<H4Wrapper>Diego Telles</H4Wrapper>
-					<H3Wrapper>CFO Execute Service</H3Wrapper>
-					<H2Wrapper>{totalSusg} CTPoints</H2Wrapper>
-                    <ContainerWrapper>
-                    <PostContainer />
-                    <EventAtendee />
-                    </ContainerWrapper>
-
-					{/* <Footer /> */}
+					<H4Wrapper>Administrador</H4Wrapper>
+					<H3Wrapper>Head Execute</H3Wrapper>
+					<H2Wrapper> </H2Wrapper>
+                    <AdminBar />
 				</SectionWrapper>				
 			</React.Fragment>
 		);
@@ -144,4 +139,4 @@ function mapStateToProps(state) {
 
 // the way to connect a component to redux is
 // to return its connected proxy
-export default connect(mapStateToProps)(ShowContent);
+export default connect(mapStateToProps)(ShowContentAdmin);

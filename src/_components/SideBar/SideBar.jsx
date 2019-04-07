@@ -39,7 +39,6 @@ const SideBarWrapper = styled.section`
 class NavBar extends React.Component {
 	constructor(props) {
 		super(props);
-		this.props = props;
 		this.state = {};
 	}
 
@@ -50,23 +49,23 @@ class NavBar extends React.Component {
 				<SideBarWrapper>
 					<ul>
 						<li>
-							<i class="fas fa-home"></i> 
+							<i className="fas fa-home"></i> 
 							<a href="#">HOME</a>
 						</li>
 						<li>
-							<i class="fas fa-wallet"></i>
+							<i className="fas fa-wallet"></i>
 							<a href="#">PONTOS</a>							
 						</li>
 						<li>
-							<i class="far fa-edit"></i>
+							<i className="far fa-edit"></i>
 							<a href="#">TODAS SUGESTOES</a>							
 						</li>
 						<li>
-							<i class="fas fa-child"></i>
+							<i className="fas fa-child"></i>
 							<a href="#">DESAFIOS</a>
 						</li>
 						<li>
-							<i class="far fa-calendar-alt"></i>
+							<i className="far fa-calendar-alt"></i>
 							<a href="#">EVENTOS</a>
 						</li>
 					</ul>

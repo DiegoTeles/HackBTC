@@ -24,7 +24,6 @@ const SectionWrapper = styled.section`
 class EventAtendee extends React.Component {
 	constructor(props) {
 		super(props);
-		this.props = props;
 		this.state = {
 			event: null,
 		};

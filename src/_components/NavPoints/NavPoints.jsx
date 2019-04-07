@@ -19,7 +19,6 @@ const H4Wrapper = styled.h4`
 class NavPoints extends React.Component {
 	constructor(props) {
 		super(props);
-		this.props = props;
 		this.state = {};
 	}
 

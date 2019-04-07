@@ -1,4 +1,5 @@
 /* Routes Constants */
 export const ROUTES = {
-    MAIN: '/'
+    MAIN: '/',
+    ADMIN: '/admin'
 }

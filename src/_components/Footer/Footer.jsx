@@ -17,7 +17,6 @@ const SectionWrapper = styled.section`
 class Footer extends React.Component {
 	constructor(props) {
 		super(props);
-		this.props = props;
 		this.state = {};
 	}
 

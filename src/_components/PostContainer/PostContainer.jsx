@@ -53,7 +53,6 @@ const PostContent = styled.div`
 class PostContainer extends React.Component {
 	constructor(props) {
 		super(props);
-		this.props = props;
 		this.state = {
 			sugestion: null,
 		};
@@ -104,7 +103,7 @@ class PostContainer extends React.Component {
 			<React.Fragment>
 				<SectionWrapper>
 					<h4>
-						<i className='far fa-edit' /> Sugestões
+						<i className='far fa-edit' /> Novas Idéias
 					</h4>
 					<TextAreaWrapper>
 						<form onSubmit={this.handleSubmit}>
@@ -114,7 +113,7 @@ class PostContainer extends React.Component {
 								name='susg'
 								onChange={this.handleChange}
 								cols='70'
-								placeholder='Deixe aqui uma sugestão...'
+								placeholder='Deixe aqui suas idéias...'
 								rows='7'
 								required
 							/>

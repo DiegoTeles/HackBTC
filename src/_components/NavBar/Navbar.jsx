@@ -106,7 +106,6 @@ width: 85%;
 class NavBar extends React.Component {
 	constructor(props) {
 		super(props);
-		this.props = props;
 		this.state = {};
 	}
 
@@ -128,7 +127,7 @@ class NavBar extends React.Component {
               className="user-image"
             >
             </img>
-            <span class="user-name">Diego Telles</span>
+            <span className="user-name">Diego Telles</span>
 					</nav>					
 				</NavBarWrapper>
 			</React.Fragment>

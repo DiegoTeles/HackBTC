@@ -7,7 +7,7 @@ import styled from '@emotion/styled';
 
 /* Components */
 import SideBar from '../../_components/SideBar';
-import ShowContent from '../../_components/ShowContent';
+import ShowContentAdmin from '../../_components/ShowContentAdmin';
 /*  Styles */
 const MainWrapper = styled.div`
 	display: flex;
@@ -25,8 +25,10 @@ const ContentWrapper = styled.section`
 	margin-left: 15%;
 `;
 
-class Main extends Component {
+class Admin extends Component {
+	
 	constructor(props) {
+		console.log('adm')
 		super(props);
 	}
 
@@ -35,11 +37,12 @@ class Main extends Component {
 	render() {
 		return (
 			<MainWrapper>
+				
 				<LabelBar>
 					<SideBar />
 				</LabelBar>
 				<ContentWrapper>
-					<ShowContent />
+					<ShowContentAdmin />
 				</ContentWrapper>
 			</MainWrapper>
 		);
@@ -53,4 +56,4 @@ function mapStateToProps(state) {
 
 // the way to connect a component to redux is
 // to return its connected proxy
-export default connect(mapStateToProps)(Main);
+export default connect(mapStateToProps)(Admin);
